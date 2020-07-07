@@ -12,6 +12,10 @@ body
     min-height: 100vh;
     background: #fff;
 }
+body.light
+{
+    background: rgb(41, 41, 41);
+}
 .clock
 {
     width: 350px;
@@ -28,15 +32,29 @@ body
                 0 15px 15px rgba(0, 0, 0, 0.5),
                 inset 0 15px 15px rgba(0, 0, 0, 0.5);
 }
+body.light .clock
+{
+    background: rgb(41, 41, 41) url(img/clock.png);
+    background-size: cover;
+    border: 4px solid rgb(41, 41, 41);
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
+                inset 10 10px 10px rgba(0, 0, 0, 0.1),
+                -8px -8px 15px rgba(0, 0, 0, 0.5),
+                inset 10 10px 10px rgba(0, 0, 0, 0.1);
+}
 .clock:before
 {
     content: '';
     position: absolute;
     width: 15px;
     height: 15px;
-    background: #000;
+    background: #008eff;
     border-radius: 50%;
     z-index: 10000;
+}
+body.light .clock:before 
+{
+    background: #008eff;
 }
 .clock .hour,
 .clock .min,
@@ -87,13 +105,17 @@ body
     border-radius: 6px 6px 0 0;
     z-index: 11;
 }
+body.light .mn:before
+{
+    background: #ff105e;
+}
 .sc:before
 {
     content: '';
     position: absolute;
     width: 2px;
     height: 150px;
-    background: #ff105e;
+    background: #008eff;
     border-radius: 6px 6px 0 0;
     z-index: 12;
 }
@@ -105,4 +127,36 @@ body
     bottom: 20px;
     color: #fff;
     position: absolute;
+}
+.toggleClass
+{
+    position: absolute;
+    left: 65px;
+    bottom: 20px;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    border-radius: 50%;
+    background: rgb(41, 41, 41);
+    color: rgb(41, 41, 41);
+    font-family: Roboto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.toggleClass:before
+{
+    position: absolute;
+    left: 40px;
+    content: 'Dark Mode';
+    white-space: nowrap;
+}
+body.light .toggleClass
+{
+    background: #fff;
+    color: #fff;
+}
+body.light .toggleClass:before
+{
+    content: 'Light Mode';
 }
