@@ -1,3 +1,4 @@
 # JustClock
-"Просто часы" для тренировки написания  кода на JavaScript.  
-Основа была взята с [канала](https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog) на YouTube, больше смотрите на нем.
+
+"Just clock" to practice writing JavaScript code.
+The basis was taken from [канала](https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog) on YouTube, watch more on it.
